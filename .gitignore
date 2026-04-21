@@ -1,9 +1,9 @@
 # Binarios y ejecutables
 programa
+.build/
 *.o
 *.out
 BancUNI
-.build/
 
 # Archivos de sistema Mac
 .DS_Store
