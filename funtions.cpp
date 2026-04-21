@@ -2,6 +2,23 @@
 
 #include "structures.h"
 
+int login(const User users[], int userCount){
+    int id, pin;
+    std::cout << "Enter user ID: ";
+    std::cin >> id;
+    std::cout << "Enter PIN: ";
+    std::cin >> pin;
+
+    for(int i = 0; i < userCount; i++){
+        if(users[i].id == id && users[i].pin == pin){
+            std::cout << "Login successful. Welcome, " << users[i].name << "!" << std::endl;
+            return i; 
+        }
+    }
+    std::cout << "Invalid ID or PIN. Please try again." << std::endl;
+    return -1; 
+};
+
 void checkBalance(const User& user){
     std::cout << "Current balance: $" << user.balance << std::endl;
 };

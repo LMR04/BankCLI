@@ -10,6 +10,7 @@ struct User {
     double balance;
 };
 
+int login(const User users[], int userCount);
 void checkBalance(const User& user);
 void deposit(User& user, double amount);
 void withdraw(User& user, double amount);

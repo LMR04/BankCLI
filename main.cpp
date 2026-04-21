@@ -7,6 +7,18 @@ const int MAX_USERS = 100;
 
 int main() {
     User users[MAX_USERS];
+
+    User counts[2]={
+        {1, 1234, "Luis", 1000.0},
+        {2, 5678, "Miguel", 500.0}
+    };
+    int userCount = 2;
+    int currentUserIndex = -1;
+
+    while (currentUserIndex == -1){
+        currentUserIndex = login(counts, userCount);
+    }
+    
     int option;
     do {
         std::cout << "---- BANKCLI ----" << std::endl;
@@ -46,13 +58,5 @@ int main() {
         }
     } while (option != 5);
     
-
-    users[0] = {1, 1234, "Alice", 1000.0};
-
-    std::cout << "---- BANKCLI INFORMATION ----" << std::endl;
-    std::cout << "id: " << users[0].id << std::endl;
-    std::cout << "pin: " << users[0].pin << std::endl;
-    std::cout << "name: " << users[0].name << std::endl;
-    std::cout << "balance: " << users[0].balance << std::endl;
     return 0;
 }
