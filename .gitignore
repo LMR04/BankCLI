@@ -1,0 +1,11 @@
+# Binarios y ejecutables
+programa
+*.o
+*.out
+BancUNI
+
+# Archivos de sistema Mac
+.DS_Store
+
+# Configuración de VS Code
+.vscode/
