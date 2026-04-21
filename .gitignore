@@ -1,6 +1,6 @@
 # Binarios y ejecutables
 programa
-.build/
+build/
 *.o
 *.out
 BancUNI
