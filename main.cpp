@@ -1,14 +1,9 @@
 #include <iostream>
 #include <string>
 
-const int MAX_USERS = 100;
+#include "structures.h"
 
-struct User {
-    int id;
-    int pin;
-    std::string name;
-    double balance;
-};
+const int MAX_USERS = 100;
 
 int main() {
     User users[MAX_USERS];
@@ -21,7 +16,14 @@ int main() {
         std::cout << "4. Transfer" << std::endl;
         std::cout << "5. Exit" << std::endl;
         std::cout << "Select an option: ";
-        std::cin >> option;
+        if(!(std::cin >> option)){
+            std::cout << "Error: Please enter a valid number." << std::endl;
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            option = 0;
+            continue; 
+        }
+
         switch (option){
         case 1:
             /* code */
