@@ -3,6 +3,7 @@ programa
 *.o
 *.out
 BancUNI
+.build/
 
 # Archivos de sistema Mac
 .DS_Store
